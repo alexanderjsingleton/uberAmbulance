@@ -17,3 +17,5 @@
 7. Check success by running steps 2-5 above.
 
 8. After confirming steps 2-5, run this command to return the assets ingested into the mongoDB: `db.ambulanceData.find().pretty()`
+
+9. To fetch information about a particular mabulance whose userId is 01, type: `db.ambulanceData.find({userId: "01"}).pretty()`
