@@ -10,7 +10,7 @@ function fetchNearestAmbulances(db, coordinates, callback) {
                         type: "Point",
                         coordinates: coordinates
                     },
-                    $maxDistance: 5000
+                    $maxDistance: 2000
                 }
             }
         }).toArray(function(err, results) {

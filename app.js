@@ -31,7 +31,7 @@ server.listen(portNumber, function() { //Runs the server on port 8000
     console.log('Server listening at port ' + portNumber);
 
     var url = 'mongodb://localhost:27017/uberAmbulance'; //Db name
-    mongoClient.connect(url, function(err, db) { //a connection with the mongodb is established here.
+    mongoClient.connect(url, function(err, db) { //a connection with the mongodb is established here.  
         console.log("Connected to Database");
 
         app.get('/citizen.html', function(req, res) { //a request to /citizen.html will render our citizen.html page

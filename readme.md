@@ -45,6 +45,10 @@ ncu -u
 
 npm update
 
+http://localhost:8000/ambulances?lat=12.9718915&&lng=77.64115449999997
+
+http://localhost:8000/ambulances?lat=77.64115449999997&&lng=12.9718915
+
 
 
 
