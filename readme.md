@@ -32,3 +32,19 @@ We propose creating a retrofitted fleet of Uber-XL vehicles comparably equipped 
 10. Create a geospatial index- or 2-d sphere index on the location field featuring a type-field within it: `db.ambulanceData.createIndex({"location": "2dsphere"})`
 
 11. This command will locate ambulances that are located within 2 kilometers from latitude 12.9718915.  `db.ambulanceData.find({    location: {        $near: {            $geometry: {                type: "Point",                coordinates: [77.64115449999997, 12.9718915]            },            $maxDistance: 2000        }    }}).pretty()`
+
+
+
+sudo chown -R $USER:$(id -gn $USER) /Users/alexanderjsingleton/.config
+
+FINAL
+
+sudo npm install -g npm-check-updates
+
+ncu -u
+
+npm update
+
+
+
+
