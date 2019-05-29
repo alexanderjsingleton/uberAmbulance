@@ -60,6 +60,8 @@ http://localhost:8000/ambulance.html
 
 http://localhost:8000/citizen.html?userId=YOURNAME
 
+6. Check web-socket integration by running: `http://localhost:8000/ambulance.html?userId=02` and/or `http://localhost:8000/citizen.html?userId=02`
+
 
 sudo chown -R $USER:$(id -gn $USER) /Users/alexanderjsingleton/.config
 
