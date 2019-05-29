@@ -2,7 +2,7 @@
 
 [According to a study recently referenced by buzzfeed](https://www.buzzfeednews.com/article/carolineodonovan/taking-uber-lyft-emergency-room-legal-liabilities), after Uber enters new markets, the rates of ambulance rides typically decrease because distressed indiviudals usually flag Uber before calling 911 to dispatch an ambulance, EMT or first-responder.  [Per the New York Times](https://www.nytimes.com/2018/10/01/upshot/uber-lyft-and-the-urgency-of-saving-money-on-ambulances.html), the cost of an ambulance ride isn't cheap: in 2011, the United States spent about $14 billion on ambulance services, of which $5.3 billion is funded Medicare. Many of those trips might not have required an ambulance; moreover, estimates of inappropriate use vary, but most are around 30 percent- not including evidence of fraud and waste fraught within the industry improperply billing Medicare for at least $700 MM last year.  For example, [the LA Times interviewed one patient](https://www.latimes.com/business/la-fi-ambulance-surprise-charges-20171129-story.html) who received a bill i/a/o **$3,660.00** for a four mile trip to the emergency-room!  
 
-We propose creating a retrofitted fleet of Uber-XL vehicles comparably equipped with the same features found in mid-size class ambulances, including affordable Philips defibrillators found in most grad-school gymnasiums throughout the country, in addition to low-cost Inogen oxygen tanks as seen on TV, or even Narcan sprays for overdose calls- all could serve as a cost-efficient *uberAmbulance* giving state and local governments a run for their money.  Acknowledging that innovation is merely iterating over invention, our proposal is merely a prototype of a working Uber-clone derived from mongoDB architecture and the npm web-server.
+We propose creating a retrofitted fleet of Uber-XL vehicles comparably equipped with the same features found in mid-size class ambulances, including affordable Philips defibrillators found in most grad-school gymnasiums throughout the country, in addition to low-cost Inogen oxygen tanks as seen on TV, or even Narcan sprays for overdose calls- all could serve as a cost-efficient *uberAmbulance* giving state and local governments a run for their money.  Acknowledging that innovation is merely iterating over invention, our proposal is merely a prototype of a working Uber-clone derived from mongoDB architecture and npm.
 
 "Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while."
 
@@ -27,7 +27,7 @@ We propose creating a retrofitted fleet of Uber-XL vehicles comparably equipped 
 
 8. After confirming steps 2-5, run this command to return the assets ingested into the mongoDB: `db.ambulanceData.find().pretty()`
 
-9. To fetch information about a particular mabulance whose userId is 01, type: `db.ambulanceData.find({userId: "01"}).pretty()`.
+9. To fetch information about a particular ambulance whose userId is 01, type: `db.ambulanceData.find({userId: "01"}).pretty()`.
 
 10. Create a geospatial index- or 2-d sphere index on the location field featuring a type-field within it: `db.ambulanceData.createIndex({"location": "2dsphere"})`
 
@@ -35,7 +35,7 @@ We propose creating a retrofitted fleet of Uber-XL vehicles comparably equipped 
 
 
 
-## npm crash-crouse
+## npm crash-course
 
 1. After downloading the node-dependencies (package.json) or cloning this repo, run `sudo npm install -g npm-check-updates` for node package-manager updater.
 
