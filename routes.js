@@ -18,6 +18,16 @@ function initialize(app, db) {
         });
 
     });
+
+     // '/ambulances/info?userId=01'
+    app.get('/ambulances/info', function(req, res) {
+        var userId = req.query.userId //extract userId from quert params
+        dbOperations.fetchAmbulanceDetails(db, userId, function(results) {
+            res.json({
+                ambulanceDetails: results
+            });
+        });
+    });
 }
 
 exports.initialize = initialize;
