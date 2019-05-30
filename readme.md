@@ -9,7 +9,7 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 — Steve Jobs
 
 
-## mongo crash-course
+## mongoDB crash-course
 
 1. Go to [mongoDB community](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x) and follow instructions for install (assuming [homebrew](https://brew.sh/) is your system package-manager). 
 
