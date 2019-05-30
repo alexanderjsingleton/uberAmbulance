@@ -13,9 +13,9 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 1. Go to [mongoDB community](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x) and follow instructions for install (assuming [homebrew](https://brew.sh/) is your system package-manager). 
 
-* `brew tap mongodb/brew`
+	* `brew tap mongodb/brew`
 
-* `brew install mongodb-community@4.0`
+	* `brew install mongodb-community@4.0`
 
 2. Fire-up mongo by typing `mongo`
 
@@ -56,14 +56,28 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 6. To launch the web-app server, run `node app js`- basic unit tests:
 
-* FAIL? http://localhost:8000/ambulances?lat=12.9718915&&lng=77.64115449999997
+	* FAIL? http://localhost:8000/ambulances?lat=12.9718915&&lng=77.64115449999997
 
-* PASS: http://localhost:8000/citizen.html
+	* PASS: http://localhost:8000/citizen.html
 
-* PASS: http://localhost:8000/ambulance.html
+	* PASS: http://localhost:8000/ambulance.html
 
-* PASS: http://localhost:8000/citizen.html?userId=YOURNAME
+	* PASS: http://localhost:8000/citizen.html?userId=YOURNAME
 
-7. Check web-socket integration by running: http://localhost:8000/ambulance.html?userId=02 and/or http://localhost:8000/citizen.html?userId=02
+	* PASS: Check web-socket integration by running: http://localhost:8000/ambulance.html?userId=02 and/or http://localhost:8000/citizen.html?userId=02
+
+8. Ambulance views successfully render data-sets ingested within mongodb seed-file, 'ambulances.json'- to verify, start the app by running `node app.js` then check the following views in sequence:
+
+	* http://localhost:8000/ambulance.html?userId=02
+
+	* http://localhost:8000/citizen.html?userId=1 OR http://localhost:8000/citizen.html?userId=alexanderjsingleton
+
+	* After opening-up those views above in separate windows, click the "Request for help" button in either one of the citizen.html views above (please note that you must first start the app, ***then open an ambulance view before requesting for help in the citzen.html vie***).
+
+	* After initiating a request from the citizen.html view, all of the ambulance-views should display "You have a new request!" in addition to the citizen.html id details.
+
+	* Click on the "Help Citizen" button within the ambulance view and the database will record/acknowledge that help is on the way.
+
+
 
 
