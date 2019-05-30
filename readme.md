@@ -56,8 +56,6 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 * FAIL? http://localhost:8000/ambulances?lat=12.9718915&&lng=77.64115449999997
 
-* PASS: http://localhost:8000/ambulances?lat=77.64115449999997&&lng=12.9718915
-
 * PASS: http://localhost:8000/citizen.html
 
 * PASS: http://localhost:8000/ambulance.html
