@@ -62,6 +62,6 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 * PASS: http://localhost:8000/citizen.html?userId=YOURNAME
 
-7. Check web-socket integration by running: `http://localhost:8000/ambulance.html?userId=02` and/or `http://localhost:8000/citizen.html?userId=02`
+7. Check web-socket integration by running: http://localhost:8000/ambulance.html?userId=02 and/or http://localhost:8000/citizen.html?userId=02
 
 
