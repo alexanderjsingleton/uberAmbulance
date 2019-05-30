@@ -27,6 +27,8 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 6. Assuming you have a json file ready for import, run `mongoimport --db uberAmbulance --collection ambulanceData < ambulances.json`
 
+* In this example, the seed-file is contained within this repo: 'ambulances.json'.
+
 7. Check success by running steps 2-5 above.
 
 8. After confirming steps 2-5, run this command to return the assets ingested into the mongoDB: `db.ambulanceData.find().pretty()`
