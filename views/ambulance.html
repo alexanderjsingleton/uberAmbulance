@@ -61,7 +61,7 @@
 
                 document.getElementById("ambulancesDetails").innerHTML = JSON.stringify(data.ambulancesDetails);
 
-                L.mapbox.accessToken = '<INSERT YOUR TOKEN HERE>';
+                L.mapbox.accessToken = '<sk.eyJ1IjoiYWxleGFuZGVyanNpbmdsZXRvbiIsImEiOiJjandiNWhjOWIwaGNiNGJvNnJnZGxpMDRmIn0.9vfG5vGcmi0lvfVgRm_fKA>';
                 //Load the map and set it to a ambulance's lat-lng
                 map = L.mapbox.map('map', 'mapbox.streets');
                 map.setView([ambulanceDetails.location.latitude, ambulanceDetails.location.longitude], 15);
