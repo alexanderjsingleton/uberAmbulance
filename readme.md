@@ -1,8 +1,8 @@
 # uberAmbulance
 
-[According to a study recently referenced by buzzfeed](https://www.buzzfeednews.com/article/carolineodonovan/taking-uber-lyft-emergency-room-legal-liabilities), after Uber enters new markets, the rates of ambulance rides typically decrease because distressed indiviudals usually flag Uber before calling 911 to dispatch an ambulance, EMT or first-responder.  [Per the New York Times](https://www.nytimes.com/2018/10/01/upshot/uber-lyft-and-the-urgency-of-saving-money-on-ambulances.html), the cost of an ambulance ride isn't cheap: in 2011, the United States spent about $14 billion on ambulance services, of which $5.3 billion is funded Medicare. Many of those trips might not have required an ambulance; moreover, estimates of inappropriate use vary, but most are around 30 percent- not including evidence of fraud and waste fraught within the industry improperply billing Medicare for at least $700 MM last year.  For example, [the LA Times interviewed one patient](https://www.latimes.com/business/la-fi-ambulance-surprise-charges-20171129-story.html) who received a bill i/a/o **$3,660.00** for a four mile trip to the emergency-room!  
+[According to a study recently referenced by buzzfeed](https://www.buzzfeednews.com/article/carolineodonovan/taking-uber-lyft-emergency-room-legal-liabilities), after Uber enters new markets, the rates of ambulance rides typically decrease because distressed indiviudals usually flag Uber before calling 911 to dispatch an ambulance, EMT or first-responder.  [As reported by the New York Times](https://www.nytimes.com/2018/10/01/upshot/uber-lyft-and-the-urgency-of-saving-money-on-ambulances.html), the cost of an ambulance ride isn't cheap: in 2011, the United States spent about $14 billion on ambulance services, of which $5.3 billion is funded Medicare. Many of those trips might not have required an ambulance; moreover, estimates of inappropriate use vary but most are around 30 percent- not including evidence of fraud and waste fraught within the industry improperply billing Medicare for at least $700 MM last year.  For example, [the LA Times interviewed one patient](https://www.latimes.com/business/la-fi-ambulance-surprise-charges-20171129-story.html) who received a bill i/a/o **$3,660.00** for a four mile trip to the emergency-room!  
 
-We propose creating a retrofitted fleet of Uber-XL vehicles comparably equipped with the same features found in mid-size class ambulances, including affordable Philips defibrillators found in most grad-school gymnasiums throughout the country, in addition to low-cost Inogen oxygen tanks as seen on TV, or even Narcan sprays for overdose calls- all could serve as a cost-efficient *uberAmbulance* giving state and local governments a run for their money.  Acknowledging that innovation is merely iterating over invention, our proposal is merely a prototype of a working Uber-clone derived from mongoDB architecture and npm.
+We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparably equipped with the same features found in mid-size class ambulances, including affordable Philips defibrillators found in most grade-school gymnasiums throughout the country, in addition to low-cost Inogen oxygen tanks as seen on TV, or even Narcan sprays for overdose calls- all serving as a cost-efficient *uberAmbulance* giving state and local governments a run for their money.  Acknowledging that innovation is merely iterating over invention, our proposal is just a prototype of a working Uber-clone derived from mongoDB architecture and npm.
 
 "Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while."
 
@@ -48,20 +48,18 @@ We propose creating a retrofitted fleet of Uber-XL vehicles comparably equipped 
 5. If experiencing any issues related to user-authorization or npm-permissions, run `sudo chown -R $USER:$(id -gn $USER) /Users/username/.config`.
 	* e.g. `sudo chown -R $USER:$(id -gn $USER) /Users/alexanderjsingleton/.config` 
 
-To launch the web-app server, run `node app js`
+To launch the web-app server, run `node app js`- basic unit tests:
 
-http://localhost:8000/ambulances?lat=12.9718915&&lng=77.64115449999997
+* FAIL? http://localhost:8000/ambulances?lat=12.9718915&&lng=77.64115449999997
 
-http://localhost:8000/ambulances?lat=77.64115449999997&&lng=12.9718915
+* PASS: http://localhost:8000/ambulances?lat=77.64115449999997&&lng=12.9718915
 
-http://localhost:8000/citizen.html
+* PASS: http://localhost:8000/citizen.html
 
-http://localhost:8000/ambulance.html
+* PASS: http://localhost:8000/ambulance.html
 
-http://localhost:8000/citizen.html?userId=YOURNAME
+* PASS: http://localhost:8000/citizen.html?userId=YOURNAME
 
 6. Check web-socket integration by running: `http://localhost:8000/ambulance.html?userId=02` and/or `http://localhost:8000/citizen.html?userId=02`
 
-
-sudo chown -R $USER:$(id -gn $USER) /Users/alexanderjsingleton/.config
 
