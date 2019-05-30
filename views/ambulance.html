@@ -56,10 +56,10 @@
                 ambulanceDetails.location = {
                     address: ambulanceDetails.location.address,
                     longitude: ambulanceDetails.location.coordinates[0],
-                    latitude: ambulancesDetails.location.coordinates[1]
+                    latitude: ambulanceDetails.location.coordinates[1]
                 }
 
-                document.getElementById("ambulancesDetails").innerHTML = JSON.stringify(data.ambulancesDetails);
+                document.getElementById("ambulanceDetails").innerHTML = JSON.stringify(data.ambulanceDetails);
 
                 L.mapbox.accessToken = '<sk.eyJ1IjoiYWxleGFuZGVyanNpbmdsZXRvbiIsImEiOiJjandiNWhjOWIwaGNiNGJvNnJnZGxpMDRmIn0.9vfG5vGcmi0lvfVgRm_fKA>';
                 //Load the map and set it to a ambulance's lat-lng
@@ -110,7 +110,7 @@
             //On clicking the button, emit a 'request-accepted' event/signal and send relevant info back to server
             socket.emit('request-accepted', {
                 requestDetails: requestDetails,
-                ambulanceDetails: ambulancesDetails
+                ambulanceDetails: ambulanceDetails
             });
         }
     </script>
