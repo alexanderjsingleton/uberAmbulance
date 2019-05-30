@@ -11,7 +11,11 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 ## mongo crash-course
 
-1. Go to [mongoDB community](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x) and follow instructions for install. 
+1. Go to [mongoDB community](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x) and follow instructions for install (assuming [homebrew](https://brew.sh/) is your system package-manager). 
+
+* `brew tap mongodb/brew`
+
+* `brew install mongodb-community@4.0`
 
 2. Fire-up mongo by typing `mongo`
 
@@ -48,7 +52,7 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 5. If experiencing any issues related to user-authorization or npm-permissions, run `sudo chown -R $USER:$(id -gn $USER) /Users/username/.config`.
 	* e.g. `sudo chown -R $USER:$(id -gn $USER) /Users/alexanderjsingleton/.config` 
 
-To launch the web-app server, run `node app js`- basic unit tests:
+6. To launch the web-app server, run `node app js`- basic unit tests:
 
 * FAIL? http://localhost:8000/ambulances?lat=12.9718915&&lng=77.64115449999997
 
@@ -60,6 +64,6 @@ To launch the web-app server, run `node app js`- basic unit tests:
 
 * PASS: http://localhost:8000/citizen.html?userId=YOURNAME
 
-6. Check web-socket integration by running: `http://localhost:8000/ambulance.html?userId=02` and/or `http://localhost:8000/citizen.html?userId=02`
+7. Check web-socket integration by running: `http://localhost:8000/ambulance.html?userId=02` and/or `http://localhost:8000/citizen.html?userId=02`
 
 
