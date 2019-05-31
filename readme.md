@@ -72,7 +72,7 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 	* http://localhost:8000/citizen.html?userId=1 OR http://localhost:8000/citizen.html?userId=alexanderjsingleton
 
-	* After opening-up those views above in separate windows, click the "Request for help" button in either one of the citizen.html views above (please note that you must first start the app, ***then open an ambulance view before requesting for help in the citzen.html vie***).
+	* After opening-up those views above in separate windows, click the "Request for help" button in either one of the citizen.html views above (please note that you must first start the app, ***then open an ambulance view before requesting for help in the citzen.html view***).
 
 	* After initiating a request from the citizen.html view, all of the ambulance-views should display "You have a new request!" in addition to the citizen.html id details.
 
