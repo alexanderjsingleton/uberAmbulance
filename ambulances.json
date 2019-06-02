@@ -1,8 +1,8 @@
 {
     "userId" : "01",
-    "displayName" : "Ambulance 1",
+    "displayName" : "uberAmbulance 1",
     "phone" : "01",
-    "email" : "ambulance01@gmail.com",
+    "email" : "uberambulance01@gmail.com",
     "earnedRatings" : 21,
     "totalRatings" : 25,
     "location" : {
@@ -16,9 +16,9 @@
 }
 {
     "userId" : "02",
-    "displayName" : "Ambulance 2",
+    "displayName" : "uberAmbulance 2",
     "phone" : "02",
-    "email" : "ambulance02@gmail.com",
+    "email" : "uberambulance02@gmail.com",
     "earnedRatings" : 10,
     "totalRatings" : 25,
     "location" : {
@@ -33,9 +33,9 @@
 }
 {
     "userId" : "03",
-    "displayName" : "Ambulance 3",
+    "displayName" : "uberAmbulance 3",
     "phone" : "03",
-    "email" : "ambulance03@gmail.com",
+    "email" : "uberambulance03@gmail.com",
     "earnedRatings" : 15,
     "totalRatings" : 25,
     "location" : {
@@ -49,9 +49,9 @@
 }
 {
     "userId" : "04",
-    "displayName" : "Ambulance 4",
+    "displayName" : "uberAmbulance 4",
     "phone" : "04",
-    "email" : "ambulance04@gmail.com",
+    "email" : "uberambulance04@gmail.com",
     "earnedRatings" : 11,
     "totalRatings" : 25,
     "location" : {
@@ -65,9 +65,9 @@
 }
 {
     "userId" : "05",
-    "displayName" : "Ambulance 5",
+    "displayName" : "uberAmbulance 5",
     "phone" : "05",
-    "email" : "ambulance05@gmail.com",
+    "email" : "uberambulance05@gmail.com",
     "earnedRatings" : 15,
     "totalRatings" : 25,
     "location" : {
@@ -81,9 +81,9 @@
 }
 {
     "userId" : "06",
-    "displayName" : "Ambulance 6",
+    "displayName" : "uberAmbulance 6",
     "phone" : "06",
-    "email" : "ambulance06@gmail.com",
+    "email" : "uberambulance06@gmail.com",
     "earnedRatings" : 21,
     "totalRatings" : 25,
     "location" : {
@@ -98,9 +98,9 @@
 }
 {
     "userId" : "07",
-    "displayName" : "Ambulance 7",
+    "displayName" : "uberAmbulance 7",
     "phone" : "07",
-    "email" : "ambulance07@gmail.com",
+    "email" : "uberambulance07@gmail.com",
     "earnedRatings" : 18,
     "totalRatings" : 25,
     "location" : {
