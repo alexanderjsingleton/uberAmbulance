@@ -45,9 +45,9 @@
         requestDetails = {
             citizenId: userId,
             location: {
-                address: "Indiranagar, Bengaluru, Karnataka 560038, India",
-                latitude: 12.9718915,
-                longitude: 77.64115449999997
+                address: "The George Washington University",
+                latitude: 38.901234,
+                longitude: -77.050637
             }
         }
 
@@ -75,10 +75,10 @@
 
         //Load the map and set it to a given lat-lng
         map = L.mapbox.map('map', 'mapbox.streets');
-        map.setView([12.9718915, 77.64115449999997], 15);
+        map.setView([38.901234, -77.050637], 15);
 
         //Display a default marker
-        marker = L.marker([12.9718915, 77.64115449999997]).addTo(map);
+        marker = L.marker([38.901234, -77.050637]).addTo(map);
 
         //Use MapBox geo-coding API
         map.addControl(L.mapbox.geocoderControl('mapbox.places', {
