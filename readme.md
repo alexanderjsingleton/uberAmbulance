@@ -19,6 +19,8 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 	* `brew install mongodb-community@4.0`
 
+	* `brew services start mongodb-community@4.0`
+
 2. Fire-up mongo by typing `mongo`
 
 3. check dbs by running `show dbs`
