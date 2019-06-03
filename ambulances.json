@@ -105,10 +105,10 @@
     "totalRatings" : 25,
     "location" : {
         "type" : "Point",
-        "address" : "Washington Circle",
+        "address" : "The George Washington University Hospital",
         "coordinates" : [
-            -77.050112,
-            38.902001
+            -77.050659,
+            38.901305
         ]
     }
 }
