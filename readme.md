@@ -35,13 +35,13 @@ We propose creating a retrofitted fleet of autonomous Uber-XL vehicles comparabl
 
 7. Check success by running steps 2-5 above.
 
-8. After confirming steps 2-5, run this command to return the assets ingested into the mongoDB: `db.ambulanceData.find().pretty()`
+8. After confirming steps 2-5, run this command to return the assets ingested into the mongoDB: `db.ambulanceData.find().pretty()`; this command will display all entities and attributes contained within the json-file ingested into mongo-database.
 
 9. To fetch information about a particular ambulance whose userId is 01, type: `db.ambulanceData.find({userId: "01"}).pretty()`.
 
 10. Create a geospatial index- or 2-d sphere index on the location field featuring a type-field within it: `db.ambulanceData.createIndex({"location": "2dsphere"})`
 
-11. This command will locate ambulances that are located within 2 kilometers from latitude 12.9718915.  `db.ambulanceData.find({    location: {        $near: {            $geometry: {                type: "Point",                coordinates: [77.64115449999997, 12.9718915]            },            $maxDistance: 2000        }    }}).pretty()`
+11. This command will locate ambulances that are located within 2 kilometers from latitude 12.9718915.  `db.ambulanceData.find({    location: {        $near: {            $geometry: {                type: "Point",                coordinates: [-77.050637, 38.902001]            },            $maxDistance: 2000        }    }}).pretty()`
 
 
 
