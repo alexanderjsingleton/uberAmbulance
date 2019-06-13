@@ -48,6 +48,7 @@ mongoose.set('debug', true);
 
 require('./models/Users');
 require('./config/passport');
+app.use(require('./routes'));
 
 //Error handlers & middlewares
 if(!isProduction) {
