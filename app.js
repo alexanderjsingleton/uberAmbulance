@@ -46,6 +46,8 @@ app.engine('html', consolidate.underscore); //Use underscore to parse templates 
 mongoose.connect('mongodb://localhost:27017/uberAmbulance');
 mongoose.set('debug', true);
 
+require('./models/Users');
+
 //Error handlers & middlewares
 if(!isProduction) {
   app.use((err, req, res) => {
