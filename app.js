@@ -8,16 +8,25 @@ var routes = require('./routes'); //File that contains our endpoints
 var mongoClient = require("mongodb").MongoClient;
 
 
-const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
 const session = require('express-session');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const errorHandler = require('errorhandler');
 
+//Configure mongoose's promise to global promise
+mongoose.promise = global.Promise;
+
+//Configure isProduction variable
+const isProduction = process.env.NODE_ENV === 'production';
+
 
 var app = express();
+app.use(cors());
+app.use(require('morgan')('dev'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'passport-tutorial', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
+
 app.use(bodyParser.urlencoded({
     extended: true,
 }));
@@ -31,6 +40,25 @@ app.use(express.static('./public')); //setting the folder name (public) where al
 
 app.set('view engine', 'html');
 app.engine('html', consolidate.underscore); //Use underscore to parse templates when we do res.render
+
+
+//Configure Mongoose
+mongoose.connect('mongodb://localhost:27017/uberAmbulance');
+mongoose.set('debug', true);
+
+//Error handlers & middlewares
+if(!isProduction) {
+  app.use((err, req, res) => {
+    res.status(err.status || 500);
+
+    res.json({
+      errors: {
+        message: err.message,
+        error: err,
+      },
+    });
+  });
+}
 
 var server = http.Server(app);
 var portNumber = 8000; //for locahost:8000
