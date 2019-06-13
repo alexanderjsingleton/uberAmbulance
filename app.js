@@ -7,6 +7,16 @@ var bodyParser = require('body-parser');
 var routes = require('./routes'); //File that contains our endpoints
 var mongoClient = require("mongodb").MongoClient;
 
+
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const errorHandler = require('errorhandler');
+
+
 var app = express();
 app.use(bodyParser.urlencoded({
     extended: true,
