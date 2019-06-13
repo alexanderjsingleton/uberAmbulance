@@ -47,6 +47,7 @@ mongoose.connect('mongodb://localhost:27017/uberAmbulance');
 mongoose.set('debug', true);
 
 require('./models/Users');
+require('./config/passport');
 
 //Error handlers & middlewares
 if(!isProduction) {
