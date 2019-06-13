@@ -1,4 +1,4 @@
-var dbOperations = require('../db-operations.js');
+var dbOperations = require('./db-operations');
 
 function initialize(app, db, socket, io) {
     // '/ambulances?lat=12.9718915&&lng=77.64115449999997'
