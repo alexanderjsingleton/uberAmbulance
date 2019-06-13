@@ -4,7 +4,7 @@ var consolidate = require("consolidate"); //1
 var _ = require("underscore");
 var bodyParser = require('body-parser');
 
-var routes = require('./routes'); //File that contains our endpoints
+var routes = require('./routes/routes.js'); //File that contains our endpoints
 var mongoClient = require("mongodb").MongoClient;
 
 
@@ -46,7 +46,11 @@ app.engine('html', consolidate.underscore); //Use underscore to parse templates 
 mongoose.connect('mongodb://localhost:27017/uberAmbulance');
 mongoose.set('debug', true);
 
+
+// Models & Routes
 require('./models/Users');
+require('./config/passport');
+
 
 //Error handlers & middlewares
 if(!isProduction) {
