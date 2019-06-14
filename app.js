@@ -4,6 +4,11 @@ var consolidate = require("consolidate"); //1
 var _ = require("underscore");
 var bodyParser = require('body-parser');
 
+const jwt=require('jsonwebtoken');
+const user=require('./user');
+const key=require("./key");
+const mongoose = require('mongoose');
+
 var routes = require('./routes'); //File that contains our endpoints
 var mongoClient = require("mongodb").MongoClient;
 
@@ -15,6 +20,58 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json({
     limit: '5mb'
 }));
+
+
+app.use(require('body-parser').json());
+app.use(function(req,res,next){
+    try{
+    const token = req.headers.authorization.split(" ")[1]
+    jwt.verify(token, key.tokenKey, function (err, payload) {
+        console.log(payload)
+        if (payload) {
+            user.findById(payload.userId).then(
+                (doc)=>{
+                    req.user=doc;
+                    next()
+                }
+            )
+        } else {
+           next()
+        }
+    })
+}catch(e){
+    next()
+}
+})
+app.post('/api/auth/signin',function(req,res){
+    user.findOne({email:req.body.email}).then((user)=>{
+            user.comparePassword(req.body.password,(err,isMatch)=>{
+                if(isMatch){
+                    var token=jwt.sign({userId:user.id},key.tokenKey);
+                    res.status(200).json({
+                        userId:user.id,
+                        username:user.username,
+                        image:user.image,
+                        name:user.first,
+                        token
+                    })
+                }
+                else{
+                    res.status(400).json({message:'Invalid Password/Username'});
+                }
+            })
+    }).catch((err)=>{
+        res.status(400).json({message:'Invalid Password/Username'});
+    })
+})
+
+app.listen("8000"||process.env.PORT,()=>{
+    console.log('done.....')
+})
+
+//Configure Mongoose
+mongoose.connect('mongodb://localhost:27017/uberAmbulance');
+mongoose.set('debug', true);
 
 app.set('views', 'views'); //Set the folder-name from where you serve the html page. 
 app.use(express.static('./public')); //setting the folder name (public) where all the static files like css, js, images etc are made available
