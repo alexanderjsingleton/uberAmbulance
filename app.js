@@ -65,7 +65,7 @@ app.post('/api/auth/signin',function(req,res){
     })
 })
 
-app.listen("8000"||process.env.PORT,()=>{
+app.listen("3001"||process.env.PORT,()=>{
     console.log('done.....')
 })
 
