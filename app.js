@@ -3,7 +3,8 @@ var express = require("express");
 var consolidate = require("consolidate"); //1
 var _ = require("underscore");
 var bodyParser = require('body-parser');
-
+var express = require('express');
+var app = express();
 var routes = require('./routes'); //File that contains our endpoints
 var mongoClient = require("mongodb").MongoClient;
 
@@ -21,7 +22,7 @@ mongoose.promise = global.Promise;
 const isProduction = process.env.NODE_ENV === 'production';
 
 
-var app = express();
+
 app.use(cors());
 app.use(require('morgan')('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -50,19 +51,19 @@ require('./models/Users');
 require('./config/passport');
 app.use(require('./routes'));
 
-//Error handlers & middlewares
-if(!isProduction) {
-  app.use((err, req, res) => {
-    res.status(err.status || 500);
+// //Error handlers & middlewares
+// if(!isProduction) {
+//   app.use((err, req, res) => {
+//     res.status(err.status || 500);
 
-    res.json({
-      errors: {
-        message: err.message,
-        error: err,
-      },
-    });
-  });
-}
+//     res.json({
+//       errors: {
+//         message: err.message,
+//         error: err,
+//       },
+//     });
+//   });
+// }
 
 var server = http.Server(app);
 var portNumber = 8000; //for locahost:8000
