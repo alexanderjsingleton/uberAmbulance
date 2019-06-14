@@ -2,7 +2,8 @@
     "userId" : "01",
     "displayName" : "uberAmbulance 1",
     "phone" : "01",
-    "email" : "uberambulance01@gmail.com",
+    "email" : "alexanderjsingleton@gmail.com",
+    "password" : "hellohello",
     "earnedRatings" : 21,
     "totalRatings" : 25,
     "location" : {
@@ -19,6 +20,7 @@
     "displayName" : "uberAmbulance 2",
     "phone" : "02",
     "email" : "uberambulance02@gmail.com",
+    "password" : "something",
     "earnedRatings" : 10,
     "totalRatings" : 25,
     "location" : {
@@ -36,6 +38,7 @@
     "displayName" : "uberAmbulance 3",
     "phone" : "03",
     "email" : "uberambulance03@gmail.com",
+    "password" : "something",
     "earnedRatings" : 15,
     "totalRatings" : 25,
     "location" : {
@@ -52,6 +55,7 @@
     "displayName" : "uberAmbulance 4",
     "phone" : "04",
     "email" : "uberambulance04@gmail.com",
+    "password" : "something",
     "earnedRatings" : 11,
     "totalRatings" : 25,
     "location" : {
@@ -68,6 +72,7 @@
     "displayName" : "uberAmbulance 5",
     "phone" : "05",
     "email" : "uberambulance05@gmail.com",
+    "password" : "something",
     "earnedRatings" : 15,
     "totalRatings" : 25,
     "location" : {
@@ -84,6 +89,7 @@
     "displayName" : "uberAmbulance 6",
     "phone" : "06",
     "email" : "uberambulance06@gmail.com",
+    "password" : "something",
     "earnedRatings" : 21,
     "totalRatings" : 25,
     "location" : {
@@ -101,6 +107,7 @@
     "displayName" : "uberAmbulance 7",
     "phone" : "07",
     "email" : "uberambulance07@gmail.com",
+    "password" : "something",
     "earnedRatings" : 18,
     "totalRatings" : 25,
     "location" : {
