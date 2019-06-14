@@ -43,6 +43,7 @@ app.use(function(req,res,next){
     next()
 }
 })
+
 app.post('/api/auth/signin',function(req,res){
     user.findOne({email:req.body.email}).then((user)=>{
             user.comparePassword(req.body.password,(err,isMatch)=>{
@@ -68,6 +69,7 @@ app.post('/api/auth/signin',function(req,res){
 app.listen("3001"||process.env.PORT,()=>{
     console.log('done.....')
 })
+
 
 //Configure Mongoose
 mongoose.connect('mongodb://localhost:27017/uberAmbulance');
